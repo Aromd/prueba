@@ -43,6 +43,10 @@ body {
     line-height: 1.6;
 }
 
+section {
+    padding: 5em 2em;
+}
+
 img {
     display: block;
     max-width: 100%;
@@ -56,7 +60,7 @@ strong {
 h1,
 h2,
 h3 {
-    line-height: 1.1;
+    line-height: 1;
     margin: 0;
 }
 
@@ -80,6 +84,10 @@ h3 {
     font-weight: var(--fw--reg);
 }
 
+.section__title--intro strong {
+    display: block;
+}
+
 .section__subtitle {
     margin: 0;
     font-size: var(--fs-h3);
@@ -89,4 +97,28 @@ h3 {
 .section__subtitle--about {
     background: var(--clr--accent);
     font-family: var(--ff--secondary);
+    margin-bottom: 1em;
+}
+
+/* header */
+
+.nav {
+    display: none;
+}
+
+/* Intro section */
+
+.intro {
+    position: relative;
+}
+
+/* VOLVER A MINUTO 45 - repasar grid antes */
+@media (min-width: 600px) {
+    .intro {
+        display: grid;
+        grid-template-areas: 
+            "img title"
+            "img subtitle";
+        
+    }
 }
