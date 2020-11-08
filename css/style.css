@@ -116,9 +116,14 @@ h3 {
 @media (min-width: 600px) {
     .intro {
         display: grid;
+        column-gap: 1em;
         grid-template-areas: 
             "img title"
             "img subtitle";
-        
+        grid-template-columns: min-content max-content;
+    }
+    .intr__img {
+        grid-area: img;
+        min-width: 250px;
     }
 }
