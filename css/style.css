@@ -37,6 +37,10 @@
 
 /* General styles */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--clr-light);
     color: var(--clr-dark);
@@ -183,6 +187,68 @@ header {
     color: var(--clr--accent);
 }
 
+.nav-toggle {
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
+
+.nav-open .nav {
+    transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+    position: fixed;
+}
+
+.nav-open .hamburguer {
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburguer::before {
+    transform: rotate(90deg) translateX(-6px);
+
+}
+
+.nav-open .hamburguer::after {
+    opacity:0
+}
+
+.hamburguer {
+    display: block;
+    position: relative;
+}
+
+.hamburguer,
+.hamburguer::before,
+.hamburguer::after {
+    background: var(--clr--accent);
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+.hamburguer::before,
+.hamburguer::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburguer::before {
+    top: 6px;
+}
+
+.hamburguer::after {
+    bottom: 6px;
+}
 /* Intro section */
 
 .intro {
@@ -194,7 +260,7 @@ header {
 }
 
 
-/* VOLVER A MINUTO 45 - repasar grid antes */
+
 @media (min-width: 600px) {
     .intro {
         display: grid;
