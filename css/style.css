@@ -296,6 +296,14 @@ h3 {
     opacity 250ms linear;
 }
 
+@supports(object-fit: cover){
+    .portfolio img{
+      height: 100%;
+      object-fit: cover;
+      object-position: center right;
+    }
+}
+
 .portfolio__item:focus {
     position: relative;
     z-index: 2;
